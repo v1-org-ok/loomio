@@ -21,7 +21,6 @@ public/GeoLite2-Country.mmdb
 .irb_history
 .bundle
 db/*.sqlite3
-config/database.yml
 config/newrelic.yml
 tmp/
 .sass-cache/
@@ -30,7 +29,6 @@ tmp/
 .ruby-gemset
 *.tmproj
 *.DS_Store
-coverage
 .project
 Session.vim
 *.sql

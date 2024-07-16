@@ -76,6 +76,7 @@ group :development, :test do
   gem 'faker'
   gem 'dotenv-rails'
   gem 'rails-controller-testing'
+  gem "simplecov", "~> 0.22.0", require: false
 end
 
 group :development do
