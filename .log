@@ -1,0 +1,17 @@
+docker run -d --name loomio -e POSTGRES_HOST_AUTH_METHOD=trust -e POSTGRES_DB=loomio_test -p 5432:5432 postgres:latest
+docker run -d --name loomio_redis -p 6379:6379 redis
+
+rbenv install 3.2.4
+rbenv local 3.2.4
+bundle install
+
+export PGDATABASE=loomio_test
+export PGHOST=localhost
+export PGPORT=5432
+export PGUSER=postgres
+export RAILS_ENV=test
+
+cp config/database.yml.postgresql config/database.yml
+bin/rails db:create
+bin/rails db:migrate
+bundle exec rspec

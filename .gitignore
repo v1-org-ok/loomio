@@ -33,7 +33,6 @@ tmp/
 Session.vim
 *.sql
 *.dump
-*.log
 .idea
 .env
 .powenv
